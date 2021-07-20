@@ -1,0 +1,86 @@
+footer {
+    // background-image: url('../../img/footer_background.jpg');
+    // background-position: 200px 200px;
+    position: relative;
+    margin-top: 35px;
+    img {
+        width: 100%;
+        height: auto;
+        &:first-of-type {
+            position: absolute;
+            top: -378px;
+        }
+        &:last-of-type {
+            position: absolute;
+            top: 0px;
+        }
+    }
+    .footerContent {
+        padding-top: 80px;
+        h3 {
+            @include styleText($fs-6, $fw-4, $color-white-1);
+            padding-bottom: 20px;
+        }
+        span {
+            display: block;
+            @include styleText($fs-1, $fw-5, $color-white-1);
+            line-height: 2.1;
+            padding: 5px 0;
+            i {
+                padding-right: 10px;
+            }
+            .footer__Icon {
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                    color: $color-black-1;
+                }
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                line-height: 2.1;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+                padding: 5px 0;
+                a {
+                    text-decoration: none;
+                    @include styleText($fs-1, $fw-5, $color-white-1);
+                    transition: all 0.3s;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        input {
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 50px;
+            background-color: transparent;
+            padding: 15px 30px;
+            @include styleText($fs-8, $fw-3, $color-white-1);
+            transition: all 0.5s;
+            &:focus {
+                outline: 0;
+                border: 1px solid rgb(255, 255, 255);
+            }
+        }
+        .btn__footer {
+            width: 82%;
+            height: 50px;
+            padding: 15px 75px;
+            border: none;
+            color: $color-black-1;
+            border-radius: 50px;
+            @include styleText($fs-8, $fw-3, $color-black-1);
+            margin-top: 20px;
+            transition: all 0.4s;
+            &:hover {
+                border: 1px solid rgb(255, 255, 255);
+                box-shadow: 0 0 0 2em $color-purple-1 inset;
+                color: $color-white-1;
+            }
+        }
+    }
+}

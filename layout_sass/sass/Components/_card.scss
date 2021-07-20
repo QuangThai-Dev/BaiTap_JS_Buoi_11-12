@@ -1,0 +1,38 @@
+.cardPerson {
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s;
+    overflow: hidden;
+    margin: 20px 0px;
+    z-index: 10;
+    img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0px;
+        &:hover {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    .card-body {
+        text-align: center;
+        span {
+            &:first-of-type {
+                @include styleText($fs-8, $fw-4, $color-purple-1);
+                margin: 0px 0px 5px;
+            }
+            &:last-of-type {
+                @include styleText($fs-3, $fw-2, $color-black-1);
+                line-height: 1.2;
+            }
+        }
+        h3 {
+            @include styleText($fs-6, $fw-4, $color-black-2);
+            line-height: 2;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.27);
+        img {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+}

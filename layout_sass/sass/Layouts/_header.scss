@@ -1,0 +1,78 @@
+header {
+    position: relative;
+    z-index: 9;
+    .navbar {
+        padding: 0 0;
+    }
+    #navbarContent {
+        .nav-link {
+            @include styleText($fs-1, $fw-3, $color-black-1);
+            padding: 0 57px 0 0;
+            &::after {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $color-purple-1;
+                position: absolute;
+                bottom: 2px;
+                margin-left: 15px;
+                transition: all 0.2s;
+                transform: scale(0);
+            }
+            &:hover {
+                &::after {
+                    transform: scale(1.4);
+                }
+                color: $color-purple-1;
+            }
+        }
+        .active {
+            .nav-link {
+                &::after {
+                    transform: scale(1);
+                    transition: all 0.2s;
+                }
+                &:hover {
+                    &::after {
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+    }
+    .navContacts {
+        align-items: center;
+        .button__phone {
+            background-color: $color-purple-1;
+            width: 110%;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            margin-right: 10px;
+            transition: all 0.3s;
+            a {
+                @include styleText($fs-1, $fw-5, $color-white-1);
+                text-decoration: none;
+            }
+            &:hover {
+                @include styleText($fs-8, $fw-5, $color-purple-1);
+                border: 1px solid $color-purple-1;
+                box-shadow: 0 0 0 2em $color-white-1 inset;
+                a {
+                    color: $color-purple-1
+                }
+            }
+        }
+        .icon {
+            color: $color-black-1;
+            font-size: $fs-1;
+            margin: 0 5px;
+            transition: all 0.3s;
+            &:hover {
+                color: $color-purple-1;
+            }
+        }
+    }
+}

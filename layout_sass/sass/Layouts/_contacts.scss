@@ -1,0 +1,100 @@
+.contact {
+    position: relative;
+    margin-top: 100px;
+    z-index: 10;
+    .contact__content {
+        align-items: center;
+    }
+    .contact__img {
+        width: 100%;
+        padding-left: 100px;
+    }
+    .card-body {
+        h1 {
+            text-align: center;
+            @include styleText($fs-7, $fw-4, $color-black-1);
+            margin-bottom: 50px;
+        }
+    }
+    .card__Contact {
+        margin-left: 55px;
+        border-radius: 15px;
+        width: 70%;
+        border: none;
+        box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.57);
+        input {
+            margin-bottom: 20px;
+            border-radius: 35px;
+            padding: 10px 30px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: $fs-8;
+            &:focus {
+                outline: 0;
+                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .custom-select {
+            border-radius: 35px;
+            font-size: $fs-8;
+            margin-bottom: 20px;
+            padding: 0px 30px;
+            height: 40px;
+            &:focus {
+                border-color: #ced4da !important;
+                outline: 0;
+                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+            }
+        }
+        textarea {
+            border-radius: 18px;
+            padding: 10px 30px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: $fs-8;
+            &:focus {
+                outline: 0;
+                box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .btn__contacts {
+            display: block;
+            margin: 35px 0px;
+            width: 45%;
+            height: 50px;
+            border: none;
+            border-radius: 35px;
+            padding: 15px 60px;
+            background-color: $color-purple-1;
+            @include styleText($fs-8, $fw-3, $color-white-1);
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            overflow: hidden;
+            &:hover {
+                // background-color: $color-white-1;
+                @include styleText($fs-8, $fw-3, $color-purple-1);
+                border: 1px solid $color-purple-1;
+                box-shadow: 0 0 0 2em $color-white-1 inset;
+            }
+        }
+        .item__Contact {
+            color: $color-purple-1;
+            position: absolute;
+            top: 20%;
+            left: 12%;
+        }
+        .fa-graduation-cap {
+            color: $color-purple-1;
+            position: absolute;
+            top: 20%;
+            left: 6%;
+        }
+        .fa-sms {
+            color: $color-purple-1;
+            position: absolute;
+            top: 10%;
+            left: 6%;
+        }
+    }
+    clear: both;
+}

@@ -1,0 +1,25 @@
+.carousel {
+    .carousel__img {
+        position: absolute;
+        top: -100px;
+        left: 0px;
+        img {
+            width: 100%;
+            height: 235px;
+        }
+    }
+    .carousel__content {
+        align-items: center;
+        span {
+            &:first-of-type {
+                @include styleText($fs-4, $fw-3, $color-purple-1);
+                display: block;
+            }
+            &:last-of-type {
+                @include styleText($fs-10, $fw-4, $color-black-1);
+                line-height: 70px;
+            }
+        }
+    }
+    clear: both;
+}
